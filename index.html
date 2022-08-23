@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="bg-slate-300 text-center w-4/5 mx-auto py-10 mt-10">
+      <h1 class="text-4xl mb-4">Choice Your Best Five Players</h1>
+      <p class="w-3/5 mx-auto text-xl">
+        Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal. Unqualified, the word football normally means the form of football that is the most popular where the word is used. 
+      </p>
+    </header>
+   
+  <main>
+
+    <section class="grid grid-cols-4 gap-4 w-4/5 mx-auto my-10" id="selected-player">
+        <div class="border-2 text-center">
+            <img class="mb-4 w-full h-44" src="messi.jpg" alt="">
+            <h3 class="text-center mb-4 text-2xl player">Lionel Messi</h3>
+            <button class="bg-neutral-300 px-16 py-3 mb-4 text-white font-semibold text-2xl select-btn" onclick="playersName(this);this.disabled=true">Select</button>
+        </div>
+        <div class="border-2 text-center">
+            <img class="mb-4 w-full h-44" src="ronaldo.jpg" alt="">
+            <h3 class="text-center mb-4 text-2xl player">Cristiano Ronaldo</h3>
+            <button class="bg-neutral-300 px-16 py-3 mb-4 text-white font-semibold text-2xl select-btn" onclick="playersName(this);this.disabled=true">Select</button>
+        </div>
+        <div class="border-2 text-center">
+            <img class="mb-4 w-full h-44" src="neymar.jpg" alt="">
+            <h3 id="player-3" class="text-center mb-4 text-2xl">Neymar</h3>
+            <button class="bg-neutral-300 px-16 py-3 mb-4 text-white font-semibold text-2xl select-btn" onclick="playersName(this);this.disabled=true">Select</button>
+        </div>
+       
+        
+            <div class="bg-orange-100 text-center py-8">
+                <h3 class="mb-3">Selected <span id="selected-playername">0</span></h3>
+    
+                    <table class="table table-zebra w-full">
+                        <tbody id="playersname-cart">
+    
+                        </tbody>
+                    </table>
+    
+           
+            </div>
+        <div class="border-2 text-center">
+            <img class="mb-4 w-full h-44" src="diego.jpg" alt="">
+            <h3 class="text-center mb-4 text-2xl">Diego Maradona</h3>
+            <button class="bg-neutral-300 px-16 py-3 mb-4 text-white font-semibold text-2xl" onclick="playersName(this);this.disabled=true">Select</button>
+        </div>
+        <div class="border-2 text-center">
+            <img class="mb-4 w-full h-44" src="iniesta.jpg" alt="">
+            <h3 class="text-center mb-4 text-2xl">Andres Iniesta</h3>
+            <button class="bg-neutral-300 px-16 py-3 mb-4 text-white font-semibold text-2xl" onclick="playersName(this);this.disabled=true">Select</button>
+        </div>
+        <div class="border-2 text-center">
+            <img class="mb-4 w-full h-44" src="kevin De.jpg" alt="">
+            <h3 class="text-center mb-4 text-2xl">Kevin De Bruyne</h3>
+            <button class="bg-neutral-300 px-16 py-3 mb-4 text-white font-semibold text-2xl" onclick="playersName(this);this.disabled=true">Select</button>
+        </div>
+      <div class="bg-black text-white p-2">
+      <h1 class="font-bold text-center text-2xl mb-5">Budget</h1>
+      <div class="grid grid-cols-2">
+          <p>Per player</p>
+          <input id="per-player-expenses" class="border border-slate-300 bg-black block px-3 mb-2"
+              type="text" name="" id="">
+      </div>
+      <Button id="calculate-player-expences-btn"
+          class="bg-blue-900 px-20 text-white font-medium mt-3">Calculate</Button>
+      <div class="grid grid-cols-2">
+          <p>Player Expences</p>
+          <p> $ <span id="player-expences"></span></p>
+      </div>
+      <div class="grid grid-cols-2">
+          <p>Manager</p>
+          <input id="manager-expense" class="border border-slate-300 bg-black block px-3 mb-2"
+              type="text" name="">
+      </div>
+      <div class="grid grid-cols-2">
+          <p>Coach</p>
+          <input id="coach-expense" class="border border-slate-300 bg-black block px-3 mb-2" type="text"
+              name="">
+      </div>
+      <Button id="total-budget" class="bg-blue-900 px-20 text-white font-medium mt-3">Calculate
+          Total</Button>
+      <div class="grid grid-cols-2 mt-5">
+          <div>Total</div>
+          <div>$ <span id="total-expenses"></span></div>
+      </div>
+  </div>
+
+    </section>
+   
+</main> 
+
+<script src="index.js"></script>
+</body>
+</html>
